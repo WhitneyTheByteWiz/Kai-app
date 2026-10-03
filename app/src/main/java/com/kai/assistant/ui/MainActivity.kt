@@ -3,7 +3,6 @@ package com.kai.assistant.ui
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -12,8 +11,6 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -44,10 +41,17 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.ui.platform.LocalContext
+import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.size
+import com.kai.assistant.voice.TTSHelper
 
 class MainActivity : ComponentActivity() {
+    private val ttsHelper by lazy { TTSHelper(this) }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        ttsHelper.initialize { /* TTS ready */ }
         setContent {
             MaterialTheme {
                 Surface(
@@ -59,11 +63,17 @@ class MainActivity : ComponentActivity() {
             }
         }
     }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        ttsHelper.shutdown()
+    }
 }
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun KaiScreen() {
+    val activity = LocalContext.current as android.app.Activity
     var messages by remember { mutableStateOf(listOf<Message>()) }
     var inputText by remember { mutableStateOf("") }
     var assistantState by remember { mutableStateOf(AssistantState.IDLE) }
@@ -127,6 +137,7 @@ fun KaiScreen() {
                         val userMsg = Message(inputText, false, System.currentTimeMillis())
                         messages = messages + userMsg
                         inputText = ""
+                        // TODO: Send to AI
                     }
                 }
             ) {
@@ -135,7 +146,7 @@ fun KaiScreen() {
             Spacer(Modifier.width(8.dp))
             IconButton(
                 onClick = {
-                    assistantState = AssistantState.LISTENING
+                    // TODO: Start voice input using activity
                 }
             ) {
                 Icon(
