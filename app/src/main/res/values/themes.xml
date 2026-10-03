@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.Kai" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/kai_primary</item>
+        <item name="colorPrimaryVariant">@color/kai_primary_variant</item>
+        <item name="colorSecondary">@color/kai_secondary</item>
+        <item name="colorSecondaryVariant">@color/kai_secondary_variant</item>
+        <item name="android:colorBackground">@color/kai_background</item>
+        <item name="colorSurface">@color/kai_surface</item>
+        <item name="colorSurfaceVariant">@color/kai_surface_variant</item>
+        <item name="colorOnPrimary">@color/kai_on_primary</item>
+        <item name="colorOnSecondary">@color/kai_on_secondary</item>
+        <item name="colorOnSurface">@color/kai_on_surface</item>
+        <item name="colorOnSurfaceVariant">@color/kai_on_surface_variant</item>
+        <item name="colorOutline">@color/kai_outline</item>
+        <item name="colorOutlineVariant">@color/kai_outline_variant</item>
+        <item name="colorError">@color/kai_error</item>
+        <item name="colorErrorContainer">@color/kai_error_container</item>
+        <item name="colorOnError">@color/kai_on_error</item>
+        <item name="android:statusBarColor">@color/kai_background</item>
+        <item name="android:navigationBarColor">@color/kai_background</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar">false</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+    </style>
+</resources>

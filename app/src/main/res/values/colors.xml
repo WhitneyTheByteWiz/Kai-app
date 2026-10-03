@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="kai_primary">#0066FF</color>
+    <color name="kai_primary_variant">#0052CC</color>
+    <color name="kai_secondary">#10B981</color>
+    <color name="kai_secondary_variant">#059669</color>
+    <color name="kai_background">#0A0A0F</color>
+    <color name="kai_surface">#14141F</color>
+    <color name="kai_surface_variant">#1E1E2E</color>
+    <color name="kai_on_primary">#FFFFFF</color>
+    <color name="kai_on_secondary">#0A0A0F</color>
+    <color name="kai_on_background">#F0F0F5</color>
+    <color name="kai_on_surface">#E8E8F0</color>
+    <color name="kai_on_surface_variant">#A0A0B0</color>
+    <color name="kai_outline">#2A2A3A</color>
+    <color name="kai_outline_variant">#3A3A4A</color>
+    <color name="kai_error">#EF4444</color>
+    <color name="kai_error_container">#3A1A1A</color>
+    <color name="kai_on_error">#FFFFFF</color>
+    <color name="kai_success">#10B981</color>
+    <color name="kai_warning">#F59E0B</color>
+    <color name="kai_info">#3B82F6</color>
+    <color name="kai_listening_ring">#0066FF</color>
+    <color name="kai_thinking_pulse">#8B5CF6</color>
+    <color name="kai_speaking_wave">#10B981</color>
+    <color name="kai_idle_dim">#4A4A5A</color>
+</resources>

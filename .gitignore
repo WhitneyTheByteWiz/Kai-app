@@ -1,0 +1,47 @@
+# Gradle
+.gradle/
+build/
+*/build/
+!gradle-wrapper.jar
+!gradle-wrapper.properties
+
+# Local configuration
+local.properties
+*.iml
+
+# IDE
+.idea/
+*.ipr
+*.iws
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Emulator
+*.avd/
+*.qcow2
+*.lock
+
+# Logs
+*.log
+
+# Environment
+.env
+*.env.local
+
+# Keystores
+*.jks
+*.keystore
+
+# Generated
+*.apk
+*.aab
+*.ap_
+
+# Temp
+tmp/
+temp/
